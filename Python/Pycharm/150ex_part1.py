@@ -372,17 +372,199 @@
 # area = b*h/2
 # print("area = ", area)
 
-Exercise 31
+# #Exercise 31
+# #Write a Python program to compute the greatest common divisor (GCD) of two positive integers.
+# def GCD(x,y):
+#     if x%y == 0:
+#         return y
+#     k = y if y>=x else x
+#     result =[]
+#     for i in range(1,int(k/2)+1): #for i in range(int(k/2)+1,1,-1)
+#         if y % i == 0 and x % i == 0:
+#             result.append(i)
+#     return result[-1]
+# print(str(GCD(360,336)))
+
+# #Exercise 32
+# #Write a Python program to get the least common multiple (LCM) of two positive integers.
+# def LCM(x,y):
+#     if x == y :
+#         return y
+#     elif x > y :
+#         z=x
+#     else :
+#         z=y
+#     while(True):
+#         if z % x == 0 and z % y == 0 :
+#             return z
+#         z +=1
+# print(str(LCM(336,360)))
+
+# #Exercise 33
+# #Write a Python program to sum of three given integers. However, if two values are equal sum will be zero.
+#
+# def sum(x, y, z):
+#     if x == y or y == z or x==z:
+#         sum = 0
+#     else:
+#         sum = x + y + z
+#     return sum
+#
+# print(sum(2, 1, 2))
+# print(sum(3,2,1))
+
+# #Exercise 34
+# #Write a Python program to sum of two given integers.
+# #However, if the sum is between 15 to 20 it will return 20.
+# def sum(x,y):
+#     result = int(x) + int(y)
+#     if 14<result<21: # if result in range(15,20):
+#         return 20
+#     return result
+#
+# print(str(sum(10,6)))
+# print(str(sum(10,12)))
+
+# #Exercise 35
+# #Write a Python program which will return true if
+# # the two given integer values are equal or their sum or difference is 5.
+# def test_number5(x,y):
+#     if x == y or x + y ==5 or abs(x-y)==5:
+#         return True
+#     else:
+#         return False
+#
+# print(test_number5(7, 2))
+# print(test_number5(3, 2))
+# print(test_number5(2, 2))
+
+# #Exercise 36
+# #Write a Python program to add two objects if both objects are an integer type.
+# def add_numbers(a, b):
+#     if not (isinstance(a, int) and isinstance(b, int)):
+#          raise TypeError("Inputs must be integers")
+#     return a + b
+#
+# print(add_numbers(10, 6))
+
+# #Exercise 37
+# #Write a Python program to display your details like name, age, address in three different lines.
+# def personal_details():
+#     name, age = "Simon", 19
+#     address = "Bangalore, Karnataka, India"
+#     print("Name: {}\nAge: {}\nAddress: {}".format(name, age, address))
+#
+# personal_details()
+
+# #Exercise 38
+# #Write a Python program to solve (x + y) * (x + y).
+# x,y = 4,3
+# result = (x+y)*(x+y)
+# print("({}+{})^2 = {}".format(x,y,result))
+
+# #Exercise 39
+# #Write a Python program to compute the future value of a
+# #specified principal amount, rate of interest, and a number of years.
+# amt = 10000
+# int = 3.5
+# years = 7
+#
+# future_value  = amt*((1+(0.01*int)) ** years)
+# print(round(future_value,2))
+
+# #Exercise 40
+# #Write a Python program to compute the distance between the points (x1, y1) and (x2, y2).
+# import math
+# A = (1,2)
+# B = (-2,3)
+# dist = math.sqrt((A[1]-B[1])**2+(A[0]-B[0])**2)
+# print(str(round(dist,3)))
+#
+# #Exercise 41
+# #Write a Python program to check whether a file exists.
+# import os.path
+# open('abc.txt','w')
+# print(os.path.isfile('abc.txt'))
+
+# #Exercise 42
+# #Write a Python program to determine whether a
+# # Python shell is executing in 32bit or 64bit mode on OS?
+# import struct
+# print(struct.calcsize("P") * 8)
+
+# #Exercise 43
+# #Write a Python program to get OS name, platform and release information.
+# import os
+# import platform
+# print(os.name)
+# print(platform.platform())
+# print(platform.release())
+
+# #Exercises 44
+# #Write a Python program to locate Python site-packages.
+# import site
+# print(site.getsitepackages())
+
+# #Exercise 45
+# #Write a python program to call an external command in Python.
+# from subprocess import call
+# call(["ls", "-l"])
+
+# #Exercise 46
+# #Write a python program to get the path and name
+# # of the file that is currently executing.
+# import os
+# print(os.path.realpath(__file__))
+
+# #Exercise 47
+# #Write a Python program to find out the number of CPUs using.
+# import multiprocessing
+# print(multiprocessing.cpu_count())
+
+# #Exercise 48
+# #Write a Python program to parse a string to Float or Integer.
+# n = "246.2458"
+# print(float(n))
+# print(int(float(n)))
+
+# #Exercise 49
+# #Write a Python program to list all files in a directory in Python.
+# from os import listdir
+# from os.path import isfile, join
+# files_list = [f for f in listdir('/home/students') if isfile(join('/home/students', f))]
+# print(files_list);
+
+# #Exercise 50
+# #Write a Python program to print without newline or space?
+# for i in range(5):
+#     print('*',end='')
+
+#Exercise 51
+#Write a Python program to determine profiling of Python programs.
+#Note: A profile is a set of statistics that describes how often and for how long
+# various parts of the program
+# executed. These statistics can be formatted into reports via the pstats
+# module.
+# import cProfile
+# def sum():
+#     x = 5
+#     y = 6
+#     print(x+y)
+#
+# cProfile.run('sum()')
+#
 
 
-
-
-
-
-
-
-
-
+from __future__ import division, print_function, unicode_literals
+import numpy as np
+import matplotlib
+import matplotlib.pyplot as plt
+x0 = np.linspace(0, 1, 2, endpoint=True)
+y0 = 1 + 2*x0
+print(x0)
+print(y0)
+plt.plot(x0,y0)
+plt.show()
 
 
 
